@@ -36,6 +36,13 @@ User.hasOne(UserProfile, {
   onDelete: 'cascade',
 });
 
+Subject.hasMany(Argument, {
+  foreignKey: 'subjectID',
+  as: 'FK_subjectID',
+  onUpdate:'cascade',
+  onDelete: 'cascade',
+})
+
 function sync(...args) {
   return sequelize.sync(...args);
 }
