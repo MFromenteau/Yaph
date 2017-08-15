@@ -18,6 +18,7 @@ const Argument = Model.define('Argument', {
 
   subjectID: {
     type: DataType.UUID,
+    primaryKey: true,
   },
 });
 
