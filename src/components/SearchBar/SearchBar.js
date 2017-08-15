@@ -4,13 +4,6 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import history from '../../history';
 import s from './SearchBar.css';
 
-function isLeftClickEvent(event) {
-  return event.button === 0;
-}
-
-function isModifiedEvent(event) {
-  return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
-}
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -28,11 +21,15 @@ class SearchBar extends React.Component {
   };
 
   handleGoClick = event => {
-    
+
     if(this.state.searchValue != "") {
+
       history.push('/search');
+      Search.setState({
+        param1 : this.state.searchValue,
+      });
     }else{
-      history.push('/home');
+      history.push('/');
     }
 
     //do something with value
