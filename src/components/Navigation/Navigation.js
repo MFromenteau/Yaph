@@ -15,10 +15,20 @@ import Link from '../Link';
 import SearchBar from '../SearchBar';
 
 class Navigation extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.searchValueNavToHeader = this.searchValueNavToHeader.bind(this);
+  }
+
+  searchValueNavToHeader(newValue) {
+    this.props.searchValueChangeH(newValue);
+  }
+
   render() {
     return (
       <div className={s.root} role="navigation">
-        <SearchBar></SearchBar>
+        <SearchBar searchValueChangeN={this.searchValueNavToHeader} />
         <span className={s.spacer}> | </span>
         <Link className={s.link} to="/about">
           About

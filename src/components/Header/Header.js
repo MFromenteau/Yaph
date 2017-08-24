@@ -16,11 +16,21 @@ import logoUrl from './logo-small.png';
 import logoUrl2x from './logo-small@2x.png';
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.searchValueHeaderToLayout = this.searchValueHeaderToLayout.bind(this);
+  }
+
+  searchValueHeaderToLayout(newValue) {
+    this.props.searchValueChangeL(newValue);
+  }
+  
+
   render() {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <Navigation />
+          <Navigation searchValueChangeH={this.searchValueHeaderToLayout} />
           <Link className={s.brand} to="/">
             <img
               src={logoUrl}

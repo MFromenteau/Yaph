@@ -17,17 +17,36 @@ import s from './Layout.css';
 import Header from '../Header';
 import Feedback from '../Feedback';
 import Footer from '../Footer';
+import history from '../../history';
 
 class Layout extends React.Component {
-  static propTypes = {
-    children: PropTypes.node.isRequired,
-  };
+
+  constructor(props) {
+    super(props);
+    this.HandleSearchValue = this.HandleSearchValue.bind(this);
+    this.state = {
+      children: PropTypes.node.isRequired,
+      searchValue: PropTypes.string,
+    };
+  }
+
+  HandleSearchValue(newValue) {
+    this.setState({
+      searchValue: newValue
+    })
+    const tempSearchValue = this.state.searchValue;
+    if (tempSearchValue.length == 0) {
+      history.push('/');
+    }else{
+      history.push('/search');
+    }
+  }
 
   render() {
     return (
       <div>
-        <Header />
-        {this.props.children}
+        <Header searchValueChangeL={this.HandleSearchValue}/>
+        { React.Children.map(this.props.children, child => React.cloneElement(child, {searchValue: this.state.searchValue}))}
         <Feedback />
         <Footer />
       </div>

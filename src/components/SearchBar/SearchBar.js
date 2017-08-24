@@ -8,40 +8,26 @@ import s from './SearchBar.css';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      buttonVal: 'go',
-      searchValue: '',
-    };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleBackSpace = this.handleBackSpace.bind(this);
   }
 
-  handleSearch = event => {
-    this.setState({
-      searchValue : event.target.value
-    });
-  };
+  handleChange(e) {
+    const searchValue = e.target.value;
+    this.props.searchValueChangeN(searchValue);
+  }
 
-  handleGoClick = event => {
-
-    if(this.state.searchValue != "") {
-
-      history.push('/search');
-      Search.setState({
-        param1 : this.state.searchValue,
-      });
-    }else{
-      history.push('/');
+  handleBackSpace(e) {
+    if(e.keyCode===8){
+      const searchValueBS = e.target.value;
+      this.props.searchValueChangeN(searchValueBS);
     }
-
-    //do something with value
   }
 
   render() {
     return (
       <div className={s.sb}>
-        <form method="get">
-          <input type="text" onChange={this.handleSearch.bind(this.value)}/>
-          <button type='submit' onClick={this.handleGoClick.bind(this)}>{this.state.buttonVal}</button>
-        </form>
+          <input type="text" placeholder="Search" onKeyDown={this.handleBackSpace} onChange={this.handleChange}/>
       </div>
     );
   }
