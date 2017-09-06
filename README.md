@@ -1,1 +1,7 @@
-### Simply YAPH
+# Yaph
+
+## Testing
+
+```
+$ npm run start
+```
