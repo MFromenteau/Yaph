@@ -12,8 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
 import Link from '../Link';
 import Navigation from '../Navigation';
-import logoUrl from './logo-small.png';
-import logoUrl2x from './logo-small@2x.png';
+import logoUrl from './logo.svg';
 
 class Header extends React.Component {
   constructor(props) {
@@ -24,7 +23,7 @@ class Header extends React.Component {
   searchValueHeaderToLayout(newValue) {
     this.props.searchValueChangeL(newValue);
   }
-  
+
 
   render() {
     return (
@@ -34,9 +33,9 @@ class Header extends React.Component {
           <Link className={s.brand} to="/">
             <img
               src={logoUrl}
-              srcSet={`${logoUrl2x} 2x`}
-              width="38"
-              height="38"
+              srcSet={`${logoUrl} 2x`}
+              width="64"
+              height="64"
               alt="React"
             />
           <span className={s.brandTxt}>yaph</span>
