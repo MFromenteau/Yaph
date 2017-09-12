@@ -1,5 +1,19 @@
 ### Changelog YAPH
 
+
+# START 12.09.2017
+
+## Subject Item 0.0.1
+### Features :
+- Adding Subject Item cards.
+
+## Graphic changes
+- background-color
+- logo
+- sticky footer
+
+# END 12.09.2017
+
 ## SearchBar 0.0.1
 ### Features :
 - Adding searchBar.
