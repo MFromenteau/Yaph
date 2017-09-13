@@ -5,6 +5,9 @@
 ### Features :
 - Adding vote system.
 
+## Grahpic changes :
+- Changing SearchBar look.
+
 # END 13.09.2017
 
 # START 12.09.2017
@@ -13,10 +16,10 @@
 ### Features :
 - Adding Subject Item cards.
 
-## Graphic changes
-- background-color
-- logo
-- sticky footer
+## Graphic changes :
+- background-color.
+- logo.
+- sticky footer.
 
 # END 12.09.2017
 
@@ -28,4 +31,4 @@
 - Need 2 backspace press to go to the home page.
 
 ## first base
-base
+Base.
