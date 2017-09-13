@@ -1,6 +1,12 @@
 ### Changelog YAPH
 
 
+# START 13.09.2017
+### Features :
+- Adding vote system.
+
+# END 13.09.2017
+
 # START 12.09.2017
 
 ## Subject Item 0.0.1

@@ -20,6 +20,16 @@ const Argument = Model.define('Argument', {
     type: DataType.UUID,
     primaryKey: true,
   },
+
+  boolPro: {
+    type: DataType.INTEGER,
+    primaryKey: true,
+  },
+
+  boolCon: {
+    type: DataType.INTEGER,
+    primaryKey: true,
+  },
 });
 
 export default Argument;

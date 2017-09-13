@@ -25,6 +25,32 @@
   }
 }
 
+.row {
+}
+
+.cardHeader {
+ width: 100%;
+ display: inline-block;
+}
+
+.cardHeader h1 {
+  width: 80%;
+}
+
+.cardHeader li {
+  display: inline-block;
+}
+
+.cardHeaderVote{
+  width: 10%;
+  float: right;
+}
+
+.cardDesc {
+  width: 100%;
+  display: block;
+}
+
 section {
   position: relative;
   margin: 0 auto;
@@ -57,7 +83,7 @@ section p {
   margin-top: 20vh;
   margin-left: 20px;
   margin-right: 20px;
-  
+
 }
 
 
@@ -65,6 +91,8 @@ section p {
   text-align: right;
   display: block;
 }
+
+
 
 
 .added h1 {

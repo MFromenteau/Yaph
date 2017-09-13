@@ -1,15 +1,10 @@
 import DataType from 'sequelize';
 import Model from '../sequelize';
 
-const Subject = Model.define('Subject', {
+const Tag = Model.define('Tag', {
   id: {
     type: DataType.UUID,
     defaultValue: DataType.UUIDV1,
-    primaryKey: true,
-  },
-
-  userId: {
-    type: DataType.UUID,
     primaryKey: true,
   },
 
@@ -20,10 +15,6 @@ const Subject = Model.define('Subject', {
   description: {
     type: DataType.STRING,
   },
-
-  score: {
-    type: DataType.INTEGER,
-  }
 });
 
-export default Subject;
+export default Tag;
